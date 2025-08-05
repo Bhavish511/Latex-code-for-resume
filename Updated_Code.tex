@@ -1,0 +1,171 @@
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{fontawesome} % Added for GitHub icon
+\input{glyphtounicode}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.3in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\bfseries\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1.5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Custom list start
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} % Custom list end
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}}
+
+% Resume starts here
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Bhavish Kumar} \\ \vspace{1pt}
+    \small 0330-2341348 $|$ \href{mailto:Bhavishsindhi3@gmail.com}{\underline{Bhavishsindhi3@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/bhavish-kumar511}{\underline{www.linkedin.com/in/bhavish-kumar511}} $|$
+    \href{https://github.com/bhavish511}{\underline{github.com/bhavish511}}
+\end{center}
+
+% Profile Summary
+\section{Profile Summary}
+\resumeSubHeadingListStart
+\item{
+        Backend developer with hands-on experience building secure and scalable web applications using Node.js, Express.js, MySQL, and RESTful APIs. Skilled in implementing authentication with JWT and Bcrypt, managing server-rendered views using Handlebars, and developing robust backend logic for admin and user-facing features. Experienced in setting up automated CI/CD pipelines using GitHub Actions and self-hosted runners with PM2(Process Manager). Comfortable deploying to cloud environments like AWS and VPS on Hostinger, with working knowledge of Docker and container orchestration. Strong focus on reliability, deployment automation, and production-readiness of backend systems.
+}
+\resumeSubHeadingListEnd
+
+% Education
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {FAST National University of Computer and Emerging Sciences (NUCES)}{Karachi, Sindh}
+      {Bachelor of Science in Computer Science}{2021 -- 2025}
+  \resumeSubHeadingListEnd
+
+% Technical Skills
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript,TypeScript, Python, C/C++, Golang, HTML/CSS} \\
+     \textbf{Developer Tools}{: GitHub (Git, Github Actions), VS Code, Linux, Postman, AWS, Hostinger, Docker, Kubernetes, Jenkins} \\
+     \textbf{Frameworks \& Libraries}{: NodeJS, ExpressJS, REST API's, BcryptJS, JWT, Bootstrap, Pandas, NumPy} }}
+ \end{itemize}
+
+% Projects
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{Self-Hosted CI/CD Deployment on Hostinger} \\
+  \emph{GitHub Actions,Ubuntu VPS(Hostinger),SSH, Node.js,Express.js,PM2,Docker,Apache2,PostgreSQL, Redis}}{June 2025}
+\resumeItemListStart
+  \resumeItem{Configured a self-hosted GitHub Actions runner on Hostinger VPS to automate deployment of backend services.}
+ \resumeItem{Built a GitHub Actions workflow to deploy on every commit via SSH and restart services with PM2.}
+  \resumeItem{Mapped backend server to a custom subdomain using Apache2 virtual hosts and configured SSL certificates with Let's Encrypt for secure HTTPS communication.}
+  \resumeItem{Dockerized PostgreSQL and Redis services for consistent, isolated database and caching environments across deployments.}
+  \resumeItem{Enabled seamless CI/CD pipeline integration with a custom runner, ensuring faster deployments, persistent service management via PM2, and full environment control.}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+  {\textbf{VolunteerConnect} \hspace{0.5em} \href{https://github.com/Bhavish511/Volunteer-Connect.git}{\textnormal{\faGithub~GITHUB}} \\
+  \emph{Node.js, Express.js, JWT, Bcrypt, MySQL, Sequelize}}{Mar 2025 -- Apr 2025}
+\resumeItemListStart
+  \resumeItem{Designed and implemented the backend architecture for a volunteer management platform serving 100+ users using Node.js, Express, and Sequelize (MySQL).}
+  \resumeItem{Built secure user authentication and role-based access control with JWT and Bcrypt(12 salt rounds) to manage volunteers and administrators.}
+  \resumeItem{Developed, documented RESTful APIs consumed by a React to manage user profiles, service history, and request workflows.}
+\resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Tixify: Event Ticket Booking Platform} \hspace{0.5em} \href{https://github.com/Bhavish511/Tixify.git}{\textnormal{\faGithub~GITHUB}} \\
+  \emph{Node.js, Express.js, MySQL, Sequelize, JWT, BcryptJS}}{Dec 2024 -- Jan 2025}
+\resumeItemListStart
+  \resumeItem{Developed Tixify's backend using Node.js, Express.js, and MySQL with a React.js frontend, and implemented JWT authentication with BcryptJS for secure user login.}
+  \resumeItem{Developed RESTful APIs for event, ticket, user, and order management using Sequelize ORM.}
+  \resumeItem{Designed a relational MySQL database, optimized queries, and ensured data consistency with ACID transactions.}
+  \resumeItem{Engineered core features including event discovery, ticket purchasing, and user profile management.}
+  \resumeItem{Developed event management tools for organizers, enabling event creation, ticket type configuration.}
+  \resumeItem{Implemented advanced search with filters by category, date, location, and price to enhance user experience.}
+\resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Downy Shoes Wear Web App} \hspace{0.5em} \href{https://github.com/Bhavish511/Database-project-.git}{\textnormal{\faGithub~GITHUB}} \\
+  \emph{Node.js, Express.js, MySQL, Handlebars, JWT, BcryptJS}}{Aug 2023 -- Sept 2023}
+\resumeItemListStart
+  \resumeItem{Developed backend of e-commerce platform with 100+ product and secure payment processing via RESTful APIs.}
+  \resumeItem{Used JWT and BcryptJS (10 salt rounds) for authentication and secure password storage, reducing breach risks.}
+  \resumeItem{Implemented backend logic for an admin panel supporting inventory updates and purchase tracking.}
+  \resumeItem{Utilized Handlebars for server-side rendering and smooth integration between backend data and frontend UI.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}  % Reduce vertical space after the last item (Projects)
+\enlargethispage{1.5\baselineskip}  % Slightly increase available space
+
+%-----------Certifications-----------
+\section{Certifications}
+\vspace{-12pt}
+\begin{footnotesize}
+\begin{multicols}{2}
+\raggedcolumns
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+  \item Build a CI/CD Pipeline with Docker: From Code to Deployment – Coursera \href{https://coursera.org/share/1e54bd6b8db39e312a29dee614ef8356}{\textbf{[Certificate]}}
+  \item Jenkins for Beginners – KodeKloud \href{https://learn.kodekloud.com/certificate/ff1692fe-ca5d-4a82-840d-d5d0a3ecc5c4}{\textbf{[Certificate]}}
+  \item Intermediate Docker – DataCamp \href{https://www.datacamp.com/completed/statement-of-accomplishment/course/6ae4cd049c04e9b22d645592be0fccca8c217d0f}{\textbf{[Certificate]}}
+  \item JavaScript Essentials – Coursera \href{https://coursera.org/share/8bccd707d35dee412c88211f59ed3804}{\textbf{[Certificate]}}
+  \item Introduction to Shell – DataCamp \href{https://www.datacamp.com/completed/statement-of-accomplishment/course/a29d7044c4829a508e6379d543592ae27df0c494}{\textbf{[Certificate]}}
+  \item Python Toolbox – DataCamp \href{https://www.datacamp.com/completed/statement-of-accomplishment/course/60b1bb72f84282e49fa521aeec0b5dd27a260775}{\textbf{[Certificate]}}
+\end{itemize}
+\end{multicols}
+\end{footnotesize}
+
+
+\end{document}
